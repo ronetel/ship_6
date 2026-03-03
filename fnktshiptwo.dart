@@ -5,7 +5,7 @@ import 'dart:isolate';
 
 const BOARD_SIZE = 10;
 const SHIP_SIZES = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1];
-const ROWS = 'ABCDEFGHIJ'; // Английские буквы
+const ROWS = 'ABCDEFGHIJ';
 
 final StreamController<String> gameLogStream =
     StreamController<String>.broadcast();
@@ -472,3 +472,4 @@ Future<void> main() async {
   await game.run();
   await gameLogStream.close();
 }
+
